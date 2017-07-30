@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_total"
+        android:divider="@color/bgDarkGray"
+        android:dividerHeight="1dp"
+        android:padding="10dp"
+        android:orientation="vertical" />
+    <!-- Empty view is only visible when the list has no items. -->
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAppearance="?android:textAppearanceMedium" />
+    <!-- Loading indicator is only shown before the first load -->
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <RelativeLayout
+        android:id="@+id/rl_total"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_cart_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            tools:text="Total : text"
+            android:text="text"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="26sp"
+            />
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="pay"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent"
+            android:background="@color/colorWhite"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
